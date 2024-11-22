@@ -20,6 +20,6 @@
     left: 40%;
     bottom: 40px;
     width: 80px;
-    display: none;
+    visibility: hidden;
 }
  
