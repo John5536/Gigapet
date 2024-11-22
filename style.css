@@ -1,0 +1,25 @@
+
+
+#canvas_container{
+    height: 400px;
+    width: 400px;
+    position: relative;
+    border: 2px solid black;
+
+
+}
+
+#create_test{
+    position: absolute;
+    right: 45%;
+    bottom: 8px;
+}
+
+#caats{
+    position: absolute;
+    left: 40%;
+    bottom: 40px;
+    width: 80px;
+    display: none;
+}
+ 
