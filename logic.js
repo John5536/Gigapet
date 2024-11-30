@@ -4,20 +4,28 @@ let apple = 1;
 let bread = 1;
 let vegetables = .5;
 let steak = 5;
-//events
-let btn_clicked_test = document.getElementById("create_test")
+class egg1 {
+    constructor(type,level,vitality,strength,hunger,happiness){
+        this.type =type;
+        this.level = level;
+        this.vitality = vitality;
+        this.strength = strength;
+        this.hunger = hunger;
+        this.happiness = happiness
+    }
+}
 
+function background1 (){
+    let testbackground = document.createElement("img");
+    Image.src ="./img/backgroundtest.jpg" ;
 
-let cat = document.getElementById("caats");
+    let container = document.getElementById("canvas_container");
 
-btn_clicked_test.addEventListener("click", function(){
-    
-    btn_clicked_test = true;
-    cat.src= "img/cats.png";
-    console.log(btn_clicked_test);
-    
-    cat.style.visibility = "visible";
+    container.appendChild(testbackground);
+}
 
-});
+document.addEventListener('DOMContentLoaded', function() { 
+    background1(); });
+
 
 
