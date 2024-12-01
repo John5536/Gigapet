@@ -18,14 +18,26 @@ class egg1 {
 
 let canvas = document.getElementById('first_canvas');
 let ctx = canvas.getContext('2d');
-let img = new Image();
-let desiredWidth = 550; // Adjust this value 
-let desiredHeight = 400; // Adjust this value
-img.src = "./img/backgroundtest.jpg"; 
+let video = document.createElement('video'); 
 
+let desiredWidth = 700; 
+let desiredHeight = 700; 
 
-img.onload = function() {
-    ctx.drawImage(img, 0, 0, desiredWidth, desiredHeight); 
+video.src = "./img/homebackground.mp4";
+video.autoplay = true; 
+video.muted = true;    
+video.loop = true;    
+
+video.onloadeddata = function() {
+    video.play(); 
+
+    function drawFrame() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height); 
+        ctx.drawImage(video, 0, 0, desiredWidth, desiredHeight); 
+        requestAnimationFrame(drawFrame);
+    }
+
+    drawFrame(); 
 };
 
 

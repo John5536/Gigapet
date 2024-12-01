@@ -1,8 +1,8 @@
 
 
 #canvas_container{
-    height: 400px;
-    width: 400px;
+    height: 700px;
+    width: 700px;
     position: relative;
     border: 2px solid black;
 
@@ -15,11 +15,3 @@
     bottom: 8px;
 }
 
-#caats{
-    position: absolute;
-    left: 40%;
-    bottom: 40px;
-    width: 80px;
-    visibility: hidden;
-}
- 
