@@ -17,3 +17,13 @@
     
 }
 
+.pet-choice-cards{
+    display: flex;
+    flex-direction: row;
+    background-color: ;
+    justify-content: space-between;
+    gap: 20px;
+
+
+}
+
