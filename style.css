@@ -1,4 +1,22 @@
 
+
+.amatic-sc-regular {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .amatic-sc-bold {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+body{
+    font-family: "Amatic SC", sans-serif;
+    margin: 200px;
+    overflow: hidden;
+}
 #create_test{
     position: absolute;
     right: 45%;
@@ -20,10 +38,76 @@
 .pet-choice-cards{
     display: flex;
     flex-direction: row;
-    background-color: ;
     justify-content: space-between;
     gap: 20px;
 
 
 }
 
+.petbackground{
+    background-color: bisque;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    min-width: 100px;
+}
+
+.chooseYourpetIntro{
+    text-align: center;
+}
+/* hover effect for cards*/
+#fireBeastcard{
+    width: 200px;
+    min-width: 100px;
+    transition: transform .5s ease, box-shadow .5s ease;
+    
+
+}
+
+#fireBeastcard:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+
+}
+
+#waterBeastcard{
+    width: 200px;
+    min-width: 100px;
+    transition: transform .5s ease, box-shadow .5s ease;
+    
+
+}
+
+#waterBeastcard:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+
+}
+
+#grassBeastcard{
+    width: 200px;
+    min-width: 100px;
+    transition: transform .5s ease, box-shadow .5s ease;
+    
+
+}
+
+#grassBeastcard:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+
+}
+
+#electricBeastcard{
+    width: 200px;
+    min-width: 100px;
+    transition: transform .5s ease, box-shadow .5s ease;
+    
+
+}
+
+#electricBeastcard:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+
+}
