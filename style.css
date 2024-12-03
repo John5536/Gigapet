@@ -131,5 +131,7 @@ body{
     border-radius: 100px;
     height: 300px;
     width: 300px;
-    border: ;
+    border: 2px solid black;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    display:  none;
 }
