@@ -54,6 +54,13 @@ electricEggimage.src = "test.img";
 let yellowEgg = new eggs ("Electric", 0, 5, 0, 0, 10, electricEggimage)
 console.log(yellowEgg);
 
+let playerchoicefire = document.getElementById("fireBeastcard");
+
+playerchoicefire.addEventListener(click, function(){
+    console.log("you chose the fire beast")
+    
+})
+
 
 
 

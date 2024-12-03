@@ -1,4 +1,6 @@
+/* COLOR PALETTE
 
+*/
 
 .amatic-sc-regular {
     font-family: "Amatic SC", sans-serif;
@@ -13,6 +15,7 @@
   }
   
 body{
+    
     font-family: "Amatic SC", sans-serif;
     margin: 200px;
     overflow: hidden;
@@ -54,6 +57,10 @@ body{
 
 .chooseYourpetIntro{
     text-align: center;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20PX;
 }
 /* hover effect for cards*/
 #fireBeastcard{
@@ -110,4 +117,19 @@ body{
     transform: translateY(-10px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 
+}
+
+/* pet you chose hovers*/
+
+#fire-pet-choice-selected {
+    z-index: 1000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: brown;
+    border-radius: 100px;
+    height: 300px;
+    width: 300px;
+    border: ;
 }
