@@ -15,10 +15,10 @@
   }
   
 body{
-    
+    height: 100%;
     font-family: "Amatic SC", sans-serif;
     margin: 200px;
-    overflow: hidden;
+   
 }
 #create_test{
     position: absolute;
@@ -118,15 +118,15 @@ body{
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 
 }
-
+.holdCards{
+    display: flex;
+    justify-content: center;
+}
 /* pet you chose hovers*/
 
 #fire-pet-choice-selected {
     z-index: 1000;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background-color: brown;
     border-radius: 100px;
     height: 300px;
@@ -134,4 +134,25 @@ body{
     border: 2px solid black;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
     display:  none;
+    animation: hoverUpandDown 2s infinite;
+}
+
+/*Card chosen animation*/ 
+@keyframes hoverUpandDown {
+    0% {
+
+        transform: translateY(0px);
+
+    }
+    50% {
+
+        transform: translateY(20px);
+
+    }
+    100% {
+
+        transform: translateY(0px);
+
+    }
+
 }
