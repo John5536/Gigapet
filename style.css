@@ -17,7 +17,7 @@
 body{
     height: 100%;
     font-family: "Amatic SC", sans-serif;
-    margin: 200px;
+    margin: 300px;
    
 }
 #create_test{
@@ -128,6 +128,42 @@ body{
     z-index: 1000;
     position: absolute;
     background-color: brown;
+    border-radius: 100px;
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    display:  none;
+    animation: hoverUpandDown 2s infinite;
+}
+#water-pet-choice-selected{
+    z-index: 1000;
+    position: absolute;
+    background-color: rgb(62, 153, 214);
+    border-radius: 100px;
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    display:  none;
+    animation: hoverUpandDown 2s infinite;
+}
+#grass-pet-choice-selected{
+    z-index: 1000;
+    position: absolute;
+    background-color: rgb(42, 165, 118);
+    border-radius: 100px;
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    display:  none;
+    animation: hoverUpandDown 2s infinite;
+}
+#electric-pet-choice-selected{
+    z-index: 1000;
+    position: absolute;
+    background-color: rgb(245, 255, 111);
     border-radius: 100px;
     height: 300px;
     width: 300px;

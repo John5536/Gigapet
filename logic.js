@@ -61,6 +61,9 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log(yellowEgg);
 
     let playerchoicefire = document.getElementById("fireBeastcard");
+    let playerchoicewater = document.getElementById("waterBeastcard");
+    let playerchoicegrass = document.getElementById("grassBeastcard");
+    let playerchoiceelectric = document.getElementById("electricBeastcard");
 
     if (playerchoicefire) {
         playerchoicefire.addEventListener("click", function() {
@@ -75,5 +78,50 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     } else {
         console.log("fireBeastcard element not found");
+    }
+
+    if (playerchoicewater) {
+        playerchoicewater.addEventListener("click", function() {
+            let cardAppearingwater = document.getElementById("water-pet-choice-selected");
+
+            if (cardAppearingwater) {
+                cardAppearingwater.style.display = "block";
+                console.log("it works");
+            } else {
+                console.log("not found");
+            }
+        });
+    } else {
+        console.log("waterBeastcard element not found");
+    }
+
+    if (playerchoicegrass) {
+        playerchoicegrass.addEventListener("click", function() {
+            let cardAppearinggrass = document.getElementById("grass-pet-choice-selected");
+
+            if (cardAppearinggrass) {
+                cardAppearinggrass.style.display = "block";
+                console.log("it works");
+            } else {
+                console.log("not found");
+            }
+        });
+    } else {
+        console.log("grassBeastcard element not found");
+    }
+
+    if (playerchoiceelectric) {
+        playerchoiceelectric.addEventListener("click", function() {
+            let cardAppearingelectric = document.getElementById("electric-pet-choice-selected");
+
+            if (cardAppearingelectric) {
+                cardAppearingelectric.style.display = "block";
+                console.log("it works");
+            } else {
+                console.log("not found");
+            }
+        });
+    } else {
+        console.log("electricBeastcard element not found");
     }
 });
