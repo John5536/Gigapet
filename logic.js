@@ -60,7 +60,10 @@ document.addEventListener('DOMContentLoaded', function() {
     let yellowEgg = new eggs("Electric", 0, 5, 0, 0, 10, electricEggimage);
     console.log(yellowEgg);
 
-    //Card manipulation
+    // Variable to hold the selected egg
+    let selectedEgg = null;
+
+    // Card manipulation
     let playerchoicefire = document.getElementById("fireBeastcard");
     let playerchoicewater = document.getElementById("waterBeastcard");
     let playerchoicegrass = document.getElementById("grassBeastcard");
@@ -103,7 +106,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     yesNocard.style.display = "flex"; // Ensure display: flex is applied
                     console.log("display: none removed, display: flex applied");
                 }
-                console.log("it works");
+                selectedEgg = redEgg; // Assign redEgg to selectedEgg
+                console.log("Red Egg selected:", selectedEgg);
             } else {
                 console.log("not found");
             }
@@ -122,7 +126,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     yesNocard.style.display = "flex"; // Ensure display: flex is applied
                     console.log("display: none removed, display: flex applied");
                 }
-                console.log("it works");
+                selectedEgg = blueEgg; // Assign blueEgg to selectedEgg
+                console.log("Blue Egg selected:", selectedEgg);
             } else {
                 console.log("not found");
             }
@@ -143,7 +148,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     yesNocard.style.display = "flex"; // Ensure display: flex is applied
                     console.log("display: none removed, display: flex applied");
                 }
-                console.log("it works");
+                selectedEgg = greenEgg; // Assign greenEgg to selectedEgg
+                console.log("Green Egg selected:", selectedEgg);
             } else {
                 console.log("not found");
             }
@@ -164,7 +170,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     yesNocard.style.display = "flex"; // Ensure display: flex is applied
                     console.log("display: none removed, display: flex applied");
                 }
-                console.log("it works");
+                selectedEgg = yellowEgg; // Assign yellowEgg to selectedEgg
+                console.log("Yellow Egg selected:", selectedEgg);
             } else {
                 console.log("not found");
             }
@@ -173,10 +180,11 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("electricBeastcard element not found");
     }
 
-    // Yes button confirms the selection and navigates to selection.html
+    // Yes button confirms the selection, shows an alert, and navigates to selection.html
     let yesButton = document.getElementById("Yes");
     if (yesButton) {
         yesButton.addEventListener("click", function() {
+            alert("You have selected the " + selectedEgg.type + " Egg!");
             window.location.href = 'selection.html';
         });
     }
