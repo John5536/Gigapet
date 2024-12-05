@@ -60,32 +60,68 @@ document.addEventListener('DOMContentLoaded', function() {
     let yellowEgg = new eggs("Electric", 0, 5, 0, 0, 10, electricEggimage);
     console.log(yellowEgg);
 
+    //Card manipulation
     let playerchoicefire = document.getElementById("fireBeastcard");
     let playerchoicewater = document.getElementById("waterBeastcard");
     let playerchoicegrass = document.getElementById("grassBeastcard");
     let playerchoiceelectric = document.getElementById("electricBeastcard");
 
+    function disableOtherCards(selectedCard) {
+        let cards = [playerchoicefire, playerchoicewater, playerchoicegrass, playerchoiceelectric];
+        cards.forEach(card => {
+            if (card !== selectedCard) {
+                card.style.pointerEvents = 'none';
+            }
+        });
+    }
+
+    function resetCards() {
+        let cards = [playerchoicefire, playerchoicewater, playerchoicegrass, playerchoiceelectric];
+        cards.forEach(card => {
+            card.style.pointerEvents = 'auto'; // Re-enable clicks for all cards
+        });
+
+        // Hide all pet choice elements
+        document.getElementById("fire-pet-choice-selected").style.display = "none";
+        document.getElementById("water-pet-choice-selected").style.display = "none";
+        document.getElementById("grass-pet-choice-selected").style.display = "none";
+        document.getElementById("electric-pet-choice-selected").style.display = "none";
+
+        // Hide the Yes/No card
+        document.getElementById("holdYesNo").style.display = "none";
+    }
+
     if (playerchoicefire) {
         playerchoicefire.addEventListener("click", function() {
             let cardAppearingfire = document.getElementById("fire-pet-choice-selected");
+            let yesNocard = document.getElementById("holdYesNo");
+            disableOtherCards(playerchoicefire);
 
             if (cardAppearingfire) {
                 cardAppearingfire.style.display = "block";
+                if (yesNocard) {
+                    yesNocard.style.display = "flex"; // Ensure display: flex is applied
+                    console.log("display: none removed, display: flex applied");
+                }
                 console.log("it works");
             } else {
                 console.log("not found");
             }
         });
-    } else {
-        console.log("fireBeastcard element not found");
     }
 
     if (playerchoicewater) {
         playerchoicewater.addEventListener("click", function() {
             let cardAppearingwater = document.getElementById("water-pet-choice-selected");
+            let yesNocard = document.getElementById("holdYesNo");
+            disableOtherCards(playerchoicewater);
 
             if (cardAppearingwater) {
                 cardAppearingwater.style.display = "block";
+                if (yesNocard) {
+                    yesNocard.style.display = "flex"; // Ensure display: flex is applied
+                    console.log("display: none removed, display: flex applied");
+                }
                 console.log("it works");
             } else {
                 console.log("not found");
@@ -98,9 +134,15 @@ document.addEventListener('DOMContentLoaded', function() {
     if (playerchoicegrass) {
         playerchoicegrass.addEventListener("click", function() {
             let cardAppearinggrass = document.getElementById("grass-pet-choice-selected");
+            let yesNocard = document.getElementById("holdYesNo");
+            disableOtherCards(playerchoicegrass);
 
             if (cardAppearinggrass) {
                 cardAppearinggrass.style.display = "block";
+                if (yesNocard) {
+                    yesNocard.style.display = "flex"; // Ensure display: flex is applied
+                    console.log("display: none removed, display: flex applied");
+                }
                 console.log("it works");
             } else {
                 console.log("not found");
@@ -113,9 +155,15 @@ document.addEventListener('DOMContentLoaded', function() {
     if (playerchoiceelectric) {
         playerchoiceelectric.addEventListener("click", function() {
             let cardAppearingelectric = document.getElementById("electric-pet-choice-selected");
+            let yesNocard = document.getElementById("holdYesNo");
+            disableOtherCards(playerchoiceelectric);
 
             if (cardAppearingelectric) {
                 cardAppearingelectric.style.display = "block";
+                if (yesNocard) {
+                    yesNocard.style.display = "flex"; // Ensure display: flex is applied
+                    console.log("display: none removed, display: flex applied");
+                }
                 console.log("it works");
             } else {
                 console.log("not found");
@@ -123,5 +171,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     } else {
         console.log("electricBeastcard element not found");
+    }
+
+    // Yes button confirms the selection and navigates to selection.html
+    let yesButton = document.getElementById("Yes");
+    if (yesButton) {
+        yesButton.addEventListener("click", function() {
+            window.location.href = 'selection.html';
+        });
+    }
+
+    // No button resets the selection
+    let noButton = document.getElementById("No");
+    if (noButton) {
+        noButton.addEventListener("click", function() {
+            resetCards();
+            console.log("Selection canceled");
+        });
     }
 });
