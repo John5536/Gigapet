@@ -1,10 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Game foods
-    let egg_level = 0;
-    let apple = 1;
-    let bread = 1;
-    let vegetables = 0.5;
-    let steak = 5;
 
     class eggs {
         constructor(type, level, vitality, strength, hunger, happiness, sprite) {
